@@ -1,0 +1,8 @@
+<h1>
+  Current Sales Total Gross Income: $ <%= number_with_precision(@total_gross_income.to_f, precision: 2) %>
+</h1>
+
+<%= form_tag import_sales_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag 'Import' %>
+<% end %>
